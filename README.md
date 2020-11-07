@@ -14,3 +14,8 @@ TODO LIST
 - [ ] Add custom filters to input
 - [ ] Add web interface vuejs/nuxt
 
+
+CI/ CD
+
+- [ ] Test on CI 
+- [ ] Deploy on GCP ( cloud functions etc ) 
