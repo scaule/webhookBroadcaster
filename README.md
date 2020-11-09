@@ -6,6 +6,10 @@ TODO LIST
 
 - [x] Api Authentication (register/login)Jwt + test
 - [x] Kafka connector for webhook endpoint
+- [x] Test user package
+- [X] Add Webhook package to receive request and put it in kafka 
+- [ ] Add Actions
+- [ ] Add Rules to start actions from a Webhook call 
 - [ ] Jira input data type
 - [ ] custom input data type
 - [ ] Jenkins output type 
