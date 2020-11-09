@@ -4,7 +4,7 @@ import "github.com/spf13/viper"
 
 const WEBHOOK_REPO_TYPE_KEY = "WEBHOOK_REPO_TYPE"
 
-func GetBrokerRepository() (WebhookBrokerRepository) {
+func GetBrokerRepository() WebhookBrokerRepository {
 
 	repoType, ok := viper.Get(WEBHOOK_REPO_TYPE_KEY).(string)
 	if !ok {

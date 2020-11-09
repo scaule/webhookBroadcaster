@@ -22,7 +22,7 @@ TODO LIST
 - [ ] Clean Docker env for developers
 - [ ] Add Kafka Streams to handle authentication directly in kafka 
 
-CI/ CD
+CI / CD 
 
 - [ ] Deploy on GCP ( cloud functions,...etc) 
 - [ ] Test on CI 

@@ -1,7 +1,7 @@
 package webhook
 
 type Webhook struct {
-	User  string `json:"user"`
+	User string `json:"user"`
 	Data string `json:"data"`
-	Type string  `json:"type"`
+	Type string `json:"type"`
 }

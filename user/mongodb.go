@@ -86,7 +86,6 @@ func (r *repo) UserExistByKeyAndSecret(key string, secret string) (bool, error) 
 	return true, nil
 }
 
-
 func (r *repo) FindUserByKeyAndSecret(key string, secret string) (*User, error) {
 
 	var user User

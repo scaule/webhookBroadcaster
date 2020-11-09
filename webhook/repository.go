@@ -1,6 +1,5 @@
 package webhook
 
-
 /* Broker interface*/
 type Reader interface {
 	Consume() (*Webhook, error)
@@ -15,7 +14,6 @@ type WebhookBrokerRepository interface {
 	Reader
 	Writer
 }
-
 
 /* DB interface */
 type DBReader interface {

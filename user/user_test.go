@@ -6,8 +6,6 @@ import (
 	"testing"
 )
 
-
-
 func TestUser(t *testing.T) {
 	//Get user repository
 	repo, err := GetRepository()
@@ -22,11 +20,10 @@ func TestUser(t *testing.T) {
 		t.Error(err)
 	}
 
-
 	//Create user with random email and password
 	var user User
 	user.Email = email
-	user.Password =  "testpassword"
+	user.Password = "testpassword"
 	err = repo.Create(&user)
 	if err != nil {
 		t.Error(err)
@@ -34,12 +31,12 @@ func TestUser(t *testing.T) {
 
 	//Try to login
 	//reset password with non hashed one
-	user.Password =  "testpassword"
+	user.Password = "testpassword"
 	token, err := repo.Login(&user)
 	if err != nil {
 		t.Error(err)
 	}
-	if len(token) == 0{
+	if len(token) == 0 {
 		t.Error(errors.New("Token is empty"))
 	}
 
@@ -48,12 +45,12 @@ func TestUser(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	if(result.Email != user.Email){
+	if result.Email != user.Email {
 		t.Error(errors.New("This is not the same user"))
 	}
 }
 
-func deleteUser(email string, t *testing.T, repo UserRepository){
+func deleteUser(email string, t *testing.T, repo UserRepository) {
 	//Remove User and test if this is ok
 	err := repo.Delete(email)
 	if err != nil {

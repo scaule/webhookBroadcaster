@@ -2,11 +2,11 @@ package webhook
 
 import (
 	"context"
+	"errors"
 	"github.com/spf13/viper"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"time"
-	"errors"
 )
 
 const MONGO_DB_KEY = "MONGO_DB"
@@ -53,7 +53,7 @@ func NewMongoRepository() (WebhookDbRepository, error) {
 	}, nil
 }
 
-func (r *mongoRepo) create(webhook *Webhook) (error) {
+func (r *mongoRepo) create(webhook *Webhook) error {
 	_, err := r.collection.InsertOne(context.TODO(), webhook)
 
 	if err != nil {
